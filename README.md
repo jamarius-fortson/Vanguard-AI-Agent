@@ -1,4 +1,6 @@
-# Vanguard AI: Enterprise-Grade Temporal Event Intelligence
+# Vanguard AI Agent
+
+###Enterprise-Grade Temporal Event Intelligence
 
 Vanguard AI is a sophisticated framework designed for the autonomous forecasting of global events using Large Language Model (LLM) agents. By integrating structured Knowledge Graphs (KG) with unstructured news intelligence, Vanguard leverages a refined **ReAct (Reasoning and Acting)** architecture to synthesize predictive insights with high temporal precision.
 
