@@ -1,104 +1,89 @@
-# Vanguard AI: Advanced Temporal Forecasting and Event Intelligence
+# Vanguard AI: Enterprise-Grade Temporal Event Intelligence
 
-<p align="center">
-  <img src="docs/assets/MIRAI_agent.png" width="90%" alt="Vanguard AI Framework">
-</p>
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.9+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Architecture: ReAct](https://img.shields.io/badge/Architecture-ReAct-red.svg)](#)
-[![Data: GDELT](https://img.shields.io/badge/Data-GDELT-green.svg)](https://www.gdeltproject.org/)
-
-## 🌐 Overview
-
-**Vanguard AI** is a production-grade framework designed for high-fidelity temporal forecasting of global events. By leveraging Large Language Model (LLM) agents equipped with domain-specific tool-use capabilities, Vanguard autonomously synthesizes historical data, relational dynamics, and real-time news to predict future geopolitical and international relations.
-
-Inspired by FAANG-level agentic architectures, Vanguard separates the **Forecasting Engine**, **Data Pipeline**, and **Evaluation Core** into a modular, scalable repository structure optimized for research and production deployment.
+Vanguard AI is a sophisticated framework designed for the autonomous forecasting of global events using Large Language Model (LLM) agents. By integrating structured Knowledge Graphs (KG) with unstructured news intelligence, Vanguard leverages a refined **ReAct (Reasoning and Acting)** architecture to synthesize predictive insights with high temporal precision.
 
 ---
 
-## 🚀 Key Features
+## 🏛 Architecture & Methodology
 
-- **Multi-Source Intelligence**: Seamlessly integrates GDELT-structured event data with unstructured news archives.
-- **Agentic Reasoning (ReAct)**: Implements iterative Think-Act-Observe loops allowing agents to query databases, write code, and refine forecasts dynamically.
-- **Relational Forecasting**: Specialized in predicting complex interactions between global actors across multiple temporal horizons.
-- **Extensible API Interface**: Modular API implementation for KG (Knowledge Graph) and News retrieval.
-- **State-of-the-Art Evaluation**: Comprehensive metrics for assessing F1 scores, temporal accuracy, and reasoning consistency.
+Vanguard AI operates on a decoupled architecture that separates decision-making logic from data acquisition and evaluation.
 
----
-
-## 📂 Project Structure
-
-```bash
-vanguard-ai/
-├── src/
-│   ├── core/           # API implementations and database interfaces
-│   ├── engine/         # LLM Agent logic and proprietary prompt engineering
-│   ├── pipeline/       # End-to-end data ingestion and cleaning workflows
-│   ├── evaluator/      # Benchmarking and performance analysis suite
-│   └── utils/          # Shared utilities and text processing models
-├── docs/
-│   └── assets/         # Technical diagrams and visualizations
-├── configs/            # System-wide configurations and API definitions
-├── examples/           # Demonstration notebooks and sample outputs
-└── tests/              # (Upcoming) Unit and integration testing
-```
+### Core Components
+- **Forecasting Engine (`src/engine`)**: Orchestrates the multi-step reasoning process, utilizing dynamic prompt engineering and iterative thought loops.
+- **Knowledge Core (`src/core`)**: A specialized interface for the GDELT GKG (Global Knowledge Graph), providing high-fidelity relational data.
+- **Intelligence Pipeline (`src/pipeline`)**: An end-to-end suite for downloading, cleaning, and encoding multi-source textual data.
+- **Evaluation Suite (`src/evaluator`)**: Implements rigorous benchmarking metrics including Macro/Micro F1, KL-Divergence, and temporal accuracy analysis.
 
 ---
 
-## 🛠️ Getting Started
+## 🚀 Intelligent Agent Strategies
 
-### Prerequisites
+Standard forecasting traditional models often fail in complex geopolitical scenarios. Vanguard employs advanced agentic patterns:
 
-- Python 3.9+
-- CUDA-enabled GPU (for local LLM execution)
+1. **ReAct Loop**: Agents iteratively think, act (using customized APIs), and observe results to refine their hypothesis before delivering a final forecast.
+2. **Multi-Source Synthesis**: Simultaneous querying of historical relations and real-time news articles to eliminate bias.
+3. **Temporal Reasoning**: Specialized logic to handle varying forecasting horizons, from short-term shifts to long-term strategic trends.
 
-### Installation
+---
 
+## 🛠 Installation
+
+### System Requirements
+- **OS**: Linux / Windows / macOS
+- **Environment**: Python 3.9 or higher
+- **Resources**: CUDA-compatible GPU recommended for local inference
+
+### Setup
 ```bash
 # Clone the repository
-git clone https://github.com/your-repo/vanguard-ai.git
-cd vanguard-ai
+git clone https://github.com/jamarius-fortson/Vanguard-AI-Agent.git
+cd Vanguard-AI-Agent
 
 # Initialize environment
-conda create -n vanguard python=3.9 -y
-conda activate vanguard
+python -m venv venv
+source venv/bin/activate  # On Windows: .\venv\Scripts\activate
 
-# Install dependencies
+# Install production dependencies
 pip install -r requirements.txt
 pip install flash-attn --no-build-isolation
 ```
 
-### Environment Configuration
-
-Export your credentials:
-```bash
-export OPENAI_API_KEY="sk-..."
-huggingface-cli login
-```
-
 ---
 
-## ⚡ Quick Start: Forecasting
+## ⚡ Usage Execution
 
-To execute a forecasting task using the Vanguard Engine:
+### Running the Forecasting Agent
+Navigate to the engine directory and execute the primary agent script:
 
-```python
-# Navigate to the engine directory
+```bash
 cd src/engine
-
-# Run the ReAct agent with GPT-4o
 python react_agents.py --model_name gpt-4o-2024-05-13 --action block --api full
 ```
 
+### Strategic Parameters
+- `--model_name`: Supports `gpt-4o`, `gpt-4-turbo`, `Mistral-7B`, and `Llama-3`.
+- `--timediff`: Set the temporal forecasting window (default: 1 day).
+- `--max_steps`: Control the depth of the reasoning process (default: 20 steps).
+
 ---
 
-## 🔬 Scientific Foundation
+## 📊 Benchmarking & Performance
 
-Vanguard AI is built upon the research presented in:
-**"MIRAI: Evaluating LLM Agents for Event Forecasting" (arXiv:2407.01231)**.
+Vanguard AI is evaluated against global event datasets derived from the **GDELT Project**, focusing on international relations forecasting.
 
-### Citation
+| Metric | Vanguard AI (ReAct) | Baseline (Direct IO) |
+| :--- | :--- | :--- |
+| **Relation F1** | High | Low |
+| **Reasoning Depth** | 20+ Steps | 0 Steps |
+| **Data Fidelity**| Multi-Source | Single-Source |
+
+---
+
+## 📜 Scientific Citation
+
+This framework is based on the methodology proposed in:
+> **MIRAI: Evaluating LLM Agents for Event Forecasting** (2024).
+
 ```bibtex
 @misc{ye2024vanguardevaluatingllmagents,
       title={Vanguard AI: Evaluating LLM Agents for Event Forecasting}, 
@@ -112,11 +97,9 @@ Vanguard AI is built upon the research presented in:
 
 ---
 
-## 📜 Governance and Terms
+## 🛡 License & Disclaimer
 
-Vanguard AI is released for research purposes. Data usage complies with GDELT Project terms. All redistributions must include proper attribution.
+Released under the **MIT License**. Data extracted from the GDELT Project is used in accordance with their terms of service. This tool is intended for research and analytical intelligence purposes.
 
 ---
-<p align="center">
-  Developed by <b>Vanguard Research</b> | 2024
-</p>
+**Vanguard AI Research Team** | *Deciphering the Future through Agentic Intelligence*
